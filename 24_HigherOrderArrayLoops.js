@@ -107,3 +107,14 @@ const myCodig=[
 myCodig.forEach( (item)=>{
     console.log(item.languageName);
 })
+
+// ********** what does for each loop return ****************
+const code=[1,2,3,4,5];
+
+const values=code.forEach( (item)=>{
+    //console.log(item);
+    return item;
+})
+// it does not return any value
+
+console.log(values)
