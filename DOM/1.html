@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background: #000;
+            color:white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM learning on Chai aur Code <span> test text </span></h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        </div>
+
+        <script>
+            const element=document.getElementById("title");
+            console.log(element.id);
+            console.log(element.class);
+            console.log(element.className);
+            console.log(element.getAttribute('id'));
+            element.setAttribute('class','test');
+            console.log(element.getAttribute('classs'));
+
+            // adding style elements
+            element.style.backgroundColor='green';
+            element.style.padding="15px";
+            element.style.borderRadius="15px";
+
+            // *********** adding content **************
+            console.log(element.textContent);       // textcontent
+            console.log(element.innerHTML);         // innerHTML
+            console.log(element.innerText);         // innerText
+
+            // innerText and innerContent
+            // innerText -- jo dikh raha hai wahi display hoga styling se nahi dikh raha hai
+            // innerContent -- it will display all the content
+            // innerHTML -- pura html ka value
+
+            // query Selector
+            const element1=document.querySelector('h1');        // query selector -- will give first h1 
+            const myul=document.querySelector('ul');
+            const turnGreen=document.querySelector('li');
+            turnGreen.style.backgroundColor="green";
+            turnGreen.style.innerText="five";
+            
+            // query Selector All
+            const tempLiList=document.querySelectorAll('li');   // quer selector all -- it will give a node list
+            
+
+
+
+
+        </script>
+</body>
+</html>
