@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM  | Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color:#fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+<script>
+   const parent = document.querySelector('.parent');
+   console.log(parent);
+   console.log(parent.children);        // how many children
+   console.log(parent.children[1].innerHTML);
+
+   for(let i=0;i<parent.children.length;i++){
+    console.log(parent.children[i].innerHTML);
+   }
+   parent.children[1].style.color="orange";
+
+   //*************** properties of parent **********************
+   // firstElementChild
+   console.log(parent.firstElementChild);           
+   // lastElementChild
+   console.log(parent.lastElementChild);
+
+   // moving from child to parent
+   const day1=document.querySelector('.day');
+   console.log(day1);
+   console.log(day1.parentElement);
+   console.log(day1.nextElementSibling);
+
+   console.log("NODES: ", parent.childNodes);
+
+   //************** create element ******************************
+   const div=document.createElement('div');
+   console.log(div);
+   div.className="main";
+   div.id=Math.round(Math.random()*10+1);
+   div.setAttribute("title","generated title");
+   div.style.backgroundColor="green";
+   div.style.padding="12px";
+   div.innerText="Chai aur Code";
+
+   // other way
+   const addText=document.createTextNode("Chai aur Code");
+   div.appendChild(addText);
+
+   // attach it to the document
+   document.body.appendChild(div);
+
+   // display on page
+  
+</script>       
+</html>
